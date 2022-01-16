@@ -1,0 +1,18 @@
+{% extends "Staff_base.html"%}
+{% load static %}
+{%block content%}
+{% block showlist %}
+<div style=" margin: 20px 20px 20px 20px; padding:20px 20px 20px 20px;">
+  <h1>Users</h1>
+  <a href="{%url 'Records:recordIndex'%}" class="btn btn-primary">Back</a>
+  <a href="{%url 'Records:userList'%}" class="btn btn-primary">User</a>
+  <a href="{%url 'Records:staffList'%}" class="btn btn-primary">BrgyStaff</a>
+  <a href="{%url 'Records:consList'%}" class="btn btn-primary">Constituents</a>
+</div>
+
+  <div class="">
+    {%block contentlist%}
+    {%endblock%}
+  </div>
+{% endblock %}
+{%endblock%}

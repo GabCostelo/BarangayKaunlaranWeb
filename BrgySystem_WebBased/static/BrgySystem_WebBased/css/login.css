@@ -1,0 +1,59 @@
+form {
+  width: 400px;
+  padding: 10px;
+}
+h1 {
+  text-align: center;
+}
+.navbar
+{
+  background-color: #1B3F73;
+}
+.navbar-brand {
+  margin-left: 5px;
+}
+.container {
+  width: 33%;
+  padding: 30px;
+}
+
+.container-login {
+  border: 3px solid #AAB5B9;
+  width: 440px;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 10px 24px 10px;;
+}
+img.avatar {
+  width: 100%;
+  margin-left: 15px;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
+.container-icon {
+  padding:0;
+  position: absolute;
+  margin-top: 13px;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 8px 15px;
+  margin: 8px 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: black;
+}
+input[type=submit] {
+  background-color: #1B3F73;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}

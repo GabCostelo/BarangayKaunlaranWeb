@@ -1,0 +1,41 @@
+{% extends "Staff_base.html"%}
+{% load static %}
+{% block content %}
+    <div class="container-list" style="margin:50px 50px 50px 50px">
+      <br>
+      <h1 style="text-align:center">Documents Requests</h1>
+      <h3 style="text-align:center">Pending Request</h3>
+      <br>
+        <table class="table table-bordered text-center">
+            <thead>
+              <td>Document Type</td>
+              <td>Requested By</td>
+              <td>Requested At</td>
+              <td>Print</td>
+              <td>Notify Constituents</td>
+              <td>Done</td>
+            </thead>
+            <tbody>
+              {%for docs in dataset%}
+              <tr>
+                <td>{{docs.Document_Type}}</td>
+                <td>{{docs.first_name}} , {{docs.last_name}}</td>
+                <td>{{docs.requested_at}}</td>
+                <td>
+                  {% if docs.Document_Type == 'Barangay Indigency'%}
+                  <a href="{%url 'documentRequest:generatePdf' docs.pk%} " class="btn btn-primary">Print</a>
+                  {% elif docs.Document_Type == 'Barangay Clearance'%}
+                  <a href="{%url 'documentRequest:generatePdfClearance' docs.pk%} " class="btn btn-primary">Print</a>
+                  {%else%}
+                  <a href="{%url 'documentRequest:generatePdfResidency' docs.pk%} " class="btn btn-primary">Print</a>
+                  {%endif%}
+                </td>
+                <td><a href="{%url 'documentRequest:sendUpdate' docs.pk%}" class="btn btn-secondary">Send Update</a></td>
+                <td><a href="{%url 'documentRequest:updateReq' docs.pk%}" class="btn btn-success">Done</a></td>
+              </tr>
+              {%endfor%}
+            </tbody>
+          </table>
+      </div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Barangay Kaunlaran</title>
+    <link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  </head>
+  <body>
+    <div class="container-fluid" style=" padding: 20px 20px 20px 20px">
+          <a href="{% url 'documentRequest:docReqList' %}" class="btn btn-primary btn-lg" style="margin-top: 5px; background-color: #1B3F73;"><i class="bi bi-arrow-left"></i></a>
+          <div class="container-fluid text-center" align="center">
+          <div class="col-md-4" style="margin: -60px 1070px; padding: 15px;">
+          <button type="button" class="btn btn-primary btn-lg" name="button" id="download" onclick="printJS('invoice','html')" style="background-color: #1B3F73;"><i class="bi bi-file-earmark-pdf" style="padding: 5px"></i>Generate PDF</button>
+        </div>
+    </div>
+  </div>
+
+    <div class="container-fluid text-center" align="center" id="invoice" style="margin:20px 20px 20px 20px; padding: 20px 20px 20px 20px">
+        <div class="col-md-8 header">
+            <img src="{%static 'BrgySystem_WebBased/images/qclogo.png'%}" align="left" width="125" height="100" >
+            <img src="{%static 'BrgySystem_WebBased/images/logo.jpg'%}" align="right" width="125" height="100" >
+            <h5 align="center">Republic of the Philippines</h5>
+            <h4>OFFICE OF THE PUNONG BARANGAY</h4>
+            <h4>BARANGAY KAUNLARAN</h4>
+            <p>156 N.Domingo Street, cor. Aurora Blvd., <br>
+              District IV, Cubao Quezon City <br>
+              Tel No. 7051100 *Telefax: 7265106
+            </p>
+            <hr>
+                <p align="right">Date</p>
+                <br>
+                <h2>{{object.Document_Type}} Certification</h2>
+                <br>
+                <br>
+                <p align="left" style="text-indent: 40px">This is to certify that {{object.first_name}} {{object.middle_name}} ,{{object.last_name}},{{object.age}} years old, {{object.nationality}},is a bonafide resident {{object.Address}}.</p>
+                <br>
+                <br>
+                <p align="left" style="text-indent: 40px" id = "message">Further, he/she belongs to one of the most indigent families of the Barangay and he/she seeks {{object.purpose}}.</p>
+                <br>
+                <br>
+                <p align="left" style="text-indent: 40px">This certificate of {{object.Document_Type}} is issued upon the request of the above mentioned name for whatever legal purpose it may serve.</p>
+                <br><br><br><br><br><br>
+                <h5 align=right style="margin-right: 50px">For and by Authority of:</h5>
+                <h4 align=right style="margin-right: 40px">Hon. Christopher Cheng</h4>
+                <h5 align=right style="margin-right: 77px">  Punong Barangay</h5>
+        </div>
+      </div>
+  </body>
+</html>

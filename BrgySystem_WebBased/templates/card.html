@@ -1,0 +1,46 @@
+{% extends "base.html"%}
+{% load static %}
+{% block card%}
+<!-- Features -->
+<div class="row" style="margin: 50 250">
+  <div class="col-md-6">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{%static 'BrgySystem_WebBased/images/immigration.png'%}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="text-align: center; font-weight: bold">Document Requests</h5>
+        <p class="card-text" style="text-align: center;">Allows residents to request documents online.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" style="margin: 0 0; padding: 0 100">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{%static 'BrgySystem_WebBased/images/monitor.png'%}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="text-align: center; font-weight: bold">Announcement</h5>
+        <p class="card-text" style="text-align: center;">Allows users to view an upcoming events or announcements.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<section id="foot">
+  <div class="container-fluid" style="background-color: #1B3F73; color: #ffffff">
+    <div class="row">
+      <div class="col-md-6 foot">
+        <h1>Contact Us</h1>
+          <p>156 N. Domingo street corner Auora Boulevard District IV, Cubao 1111 Quezon City, Philippines
+          <br> Business Hours: 8:00 AM - 6:00 PM</p>
+          <p>Email: barangaykaunlaran.dapatchampion@gmail.com</p>
+      </div>
+      <div class="col-md-6 foot">
+        <h1>Get Help?</h1>
+        <ul>
+          <li><a href="#" style="color: #ffffff">Document Requested Status</a></li>
+          <li><a href="#" style="color: #ffffff">Requirements</a></li>
+          <li><a href="#" style="color: #ffffff">Payment Methods</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  {% endblock %}

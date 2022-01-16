@@ -1,0 +1,33 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content %}
+{%if user.is_authenticated %}
+<style media="screen">
+  p{
+    margin: 20px;
+    letter-spacing: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+</style>
+<h1 align="center">Request A Document</h1>
+
+<div style="border: 3px solid #1B3F73; border-radius:30px; height: 750; width: 900; margin: 10 270;  background-color: #DFE0E2;">
+
+<div class="container-req" style="padding: 0; margin: 0 200">
+<form method="POST">
+  {% csrf_token %}
+  {{docReq_form.as_p}}
+  <input type="submit" value="Submit">
+</form>
+</div>
+<script>
+  var name =  "{{user.id}}"
+  document.getElementById("elder").value = name;
+  var addr = "{{user.address}}"
+  document.getElementById("address").value = addr;
+</script>
+{%else%}
+You are not allowed here!
+{%endif%}
+{%endblock%}

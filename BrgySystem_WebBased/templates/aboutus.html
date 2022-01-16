@@ -1,0 +1,109 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content %}
+<section id="kapitan">
+  <div class="container-fluid">
+    <h2 style="text-align:center; margin: 10">Barangay Kaunlaran Officials</h2>
+  </div>
+  <div class="container">
+      <div class="row ">
+        <div class="captain">
+          <img src="{%static 'BrgySystem_WebBased/images/cropped.jpg'%}" class="rounded-circle" alt="">
+          <h4 class="title">Hon. Christopher Cheng</h4>
+          <hr class="rounded">
+          <h4 style="color:#D13B1C">Brgy. Captain</h4>
+        </div>
+      </div>
+  </div>
+</section>
+<section id= kagawad>
+  <div class="container">
+    <h3 style="text-align:center">Barangay Kagawads</h3>
+
+  </div>
+  <div class="container">
+      <div class="row ">
+        <div class="col-md-3 kagawad">
+          <img src="{%static 'BrgySystem_WebBased/images/maersk.png'%}" class="rounded-circle" alt="">
+          <h4>Maersk A. Ronquillo</h4>
+        </div>
+        <div class="col-md-3 kagawad">
+          <img src="{%static 'BrgySystem_WebBased/images/mercidita.png'%}" class="rounded-circle" alt="">
+          <h4>Mercedita M. Lapuz</h4>
+        </div>
+        <div class="col-md-3 kagawad">
+          <img src="{%static 'BrgySystem_WebBased/images/jimmy.png'%}" class="rounded-circle" alt="">
+          <h4>Jimmy M. Bibat</h4>
+        </div>
+        <div class="col-md-3 kagawad">
+          <img src="{%static 'BrgySystem_WebBased/images/lourdes.png'%}" class="rounded-circle" alt="">
+          <h4>Lourdes J. De Angel</h4>
+        </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 kagawad">
+            <img src="{%static 'BrgySystem_WebBased/images/rodolfo.png'%}" class="rounded-circle" alt="">
+            <h4>Rodolfo M. Padolina</h4>
+          </div>
+          <div class="col-md-4 kagawad">
+            <img src="{%static 'BrgySystem_WebBased/images/oniereyes.png'%}" class="rounded-circle" alt="">
+            <h4>Leonila H. Reyes</h4>
+          </div>
+          <div class="col-md-4 kagawad">
+            <img src="{%static 'BrgySystem_WebBased/images/jessie.png'%}" class="rounded-circle" alt="">
+            <h4>Jessie R. Tanedo</h4>
+          </div>
+
+      </div>
+      </div>
+</section>
+  <hr class="rounded-one">
+<section id="staffs">
+  <div class="container">
+
+    <h3 style="text-align:center">Barangay Staffs</h3>
+  </div>
+  <div class="container">
+      <div class="row ">
+        <div class="col-md-4 kagawad">
+          <img src="{%static 'BrgySystem_WebBased/images/sarah.png'%}" class="rounded-circle" alt="">
+          <h4>Sarah P. Austria</h4>
+          <h4 style="color:#D13B1C">Brgy. Secretary</h4>
+        </div>
+        <div class="col-md-4 kagawad">
+          <img src="{%static 'BrgySystem_WebBased/images/user-female.png'%}" class="rounded-circle" alt="">
+          <h4>Paula A. De Leon</h4>
+          <h4 style="color:#D13B1C">Brgy. Treasurer</h4>
+        </div>
+        <div class="col-md-4 kagawad">
+          <img src="{%static 'BrgySystem_WebBased/images/marcus.png'%}" class="rounded-circle" alt="">
+          <h4>Marcus Angelo Teneza</h4>
+          <h4 style="color:#D13B1C">Sk Chairman</h4>
+        </div>
+        </div>
+      </div>
+</section>
+
+<section id="foot">
+  <div class="container-fluid" style="background-color: #1B3F73; color: #ffffff">
+    <div class="row">
+      <div class="col-md-6 foot">
+        <h1>Contact Us</h1>
+          <p>156 N. Domingo street corner Auora Boulevard District IV, Cubao 1111 Quezon City, Philippines
+          <br> Business Hours: 8:00 AM - 6:00 PM</p>
+          <p>Email: barangaykaunlaran.dapatchampion@gmail.com</p>
+      </div>
+      <div class="col-md-6 foot">
+        <h1>Get Help?</h1>
+        <ul>
+          <li><a href="#" style="color: #ffffff">Document Requested Status</a></li>
+          <li><a href="#" style="color: #ffffff">Requirements</a></li>
+          <li><a href="#" style="color: #ffffff">Payment Methods</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

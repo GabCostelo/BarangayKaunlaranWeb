@@ -1,0 +1,21 @@
+{% extends "Staff_base.html"%}
+{% load static %}
+{% block content %}
+<div align="center" style="margin:10 10 10 10; padding:10 10 10 10">
+  <h1>Send Document Status Update</h1>
+</div>
+<div style="padding: 10 20; margin: 10 700; border: 3px solid #1B3F73; border-radius:30px; background-color: #DFE0E2;">
+  <form method="post">
+    {%csrf_token%}
+    <div>
+      <label for="emailParam">Email</label>
+      <input type="text" name="emailParam" value="{{data.email}}">
+    </div>
+    <div >
+      <label for="StatusBody">Body</label>
+      <textarea name="StatusBody" rows="8" cols="50" style="margin: 10 10"></textarea>
+    </div>
+    <input type="submit" name="btnSend" value="Send">
+  </form>
+</div>
+{%endblock%}

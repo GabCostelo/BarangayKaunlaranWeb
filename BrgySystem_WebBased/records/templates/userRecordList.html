@@ -1,0 +1,39 @@
+{% extends "Staff_base.html"%}
+{% load static %}
+{%block content%}
+{% block showlist %}
+{%block contentlist%}
+<link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
+<script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+<div style=" margin: 20px 20px 20px 20px; padding:20px 20px 20px 20px;">
+  <h1>List of registered User</h1>
+  <a href="{%url 'Records:userRecord'%}" class="btn btn-primary">Back</a>
+  <button type="button" class="btn btn-primary" onclick="printJS('print','html')">Print Report</button>
+</div>
+<div style="margin:50px 50px 50px 50px">
+  <table class="table table-bordered" id="print">
+    <thead>
+      <td><b>Username</b></td>
+      <td><b>Full Name</b></td>
+      <td><b>Date Joined</b></td>
+    </thead>
+    <tbody>
+      {%for doc in dataset%}
+      <tr>
+        <td>{{doc.username}}</td>
+        <td>{{doc.first_name}}, {{doc.last_name}}</td>
+        <td>{{doc.date_joined}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+{%endblock%}
+{%endblock%}
+{%endblock%}

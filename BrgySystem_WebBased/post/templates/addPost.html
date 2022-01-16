@@ -1,0 +1,13 @@
+{% extends "Staff_base.html"%}
+{% load static %}
+{% block content %}
+<h1 style="text-align:center">Add Post</h1>
+<div style="padding: 10 20; margin: 10 450; border: 3px solid #1B3F73; border-radius:30px; background-color: #DFE0E2;">
+  <form method="POST" enctype="multipart/form-data" >
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Post">
+  </form>
+</div>
+
+{% endblock %}

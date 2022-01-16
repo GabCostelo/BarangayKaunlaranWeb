@@ -1,0 +1,38 @@
+form {
+  width: 100%;
+}
+h1 {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+.navbar
+{
+  background-color: #1B3F73;
+}
+.navbar-brand {
+  margin-left: 5px;
+}
+.container {
+  width: 100%;
+  background-color: #DFE0E2;
+}
+input[type=text], input[type=password], input[type=email] {
+  width: 250px;
+  padding: 5px 15px;
+  margin: 8px 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: black;
+}
+input[type=submit] {
+  background-color: #1B3F73;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 270px;
+  border: none;
+  cursor: pointer;
+  width: 500px;
+}

@@ -1,0 +1,15 @@
+{% extends "Staff_base.html"%}
+{% load static %}
+{% block content %}
+  <div style=" margin: 20px 20px 20px 20px; padding:20px 20px 20px 20px;">
+    <div class="col-4">
+    <h1>Records</h1>
+    <a href="{%url 'Records:userRecord'%}" class="btn btn-primary">Users</a>
+    <a href="{%url 'Records:docRecord'%}" class="btn btn-primary">Processed Documents</a>
+    </div>
+  </div>
+<div>
+    {%block showlist%}
+    {%endblock%}
+</div>
+{% endblock %}
